@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    /* Paleta da pesquisa (canais RGB, para alpha): fonte única de cor */
+    --field: 29 53 200;
+    --ink: 11 16 51;
+    --ink-soft: 74 82 128;
+    --ink-line: 201 206 232;
+    --paper: 255 255 255;
+    --paper-dim: 236 239 250;
+    --tag: 255 210 26;
+    --brand-orange: 249 115 22;
+    --brand-orange-hover: 251 138 60;
+    --alert: 179 38 30;
+    --nota-baixa: 255 138 122;
+    --nota-alta: 91 224 138;
+
+    --radius: 0.625rem;
+  }
+
+  * {
+    border-color: rgb(var(--ink-line));
+  }
+  html {
+    @apply antialiased;
+    background: rgb(var(--field));
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-field text-ink font-sans;
+    font-size: 1.0625rem;
+    caret-color: rgb(var(--brand-orange));
+    min-height: 100dvh;
+    touch-action: manipulation;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+  ::selection {
+    background: rgb(var(--tag));
+    color: rgb(var(--ink));
+  }
+  :focus-visible {
+    outline: 3px solid rgb(var(--ink));
+    outline-offset: 3px;
+  }
+  textarea {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--ink)) transparent;
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Movimento reduzido: sem deslocamento nem escala, mas o feedback de estado
+   (cor, preenchimento, opacidade) continua. A entrada vira um fade curto e o
+   spinner de envio permanece, pois sinaliza progresso. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-tag-in {
+    animation: fade-in 0.2s linear both !important;
+  }
+}

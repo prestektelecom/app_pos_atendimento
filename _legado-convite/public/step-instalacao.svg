@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360">
+  <rect width="480" height="360" rx="24" fill="#1A1030"/>
+  <circle cx="400" cy="80" r="120" fill="#3B1A6E" opacity="0.5"/>
+  <circle cx="70" cy="310" r="110" fill="#F97316" opacity="0.12"/>
+  <!-- floor -->
+  <rect x="60" y="272" width="360" height="10" rx="5" fill="#2A1052"/>
+  <!-- cozy window -->
+  <rect x="70" y="70" width="90" height="110" rx="12" fill="#2A1052" stroke="#3B1A6E" stroke-width="2"/>
+  <line x1="115" y1="70" x2="115" y2="180" stroke="#3B1A6E" stroke-width="2"/>
+  <line x1="70" y1="125" x2="160" y2="125" stroke="#3B1A6E" stroke-width="2"/>
+  <circle cx="98" cy="98" r="10" fill="#FDBA74" opacity="0.8"/>
+  <!-- router on table -->
+  <rect x="180" y="236" width="120" height="12" rx="4" fill="#3B1A6E"/>
+  <rect x="186" y="248" width="8" height="24" fill="#2A1052"/>
+  <rect x="286" y="248" width="8" height="24" fill="#2A1052"/>
+  <g>
+    <rect x="196" y="204" width="88" height="32" rx="10" fill="#F8FAFC"/>
+    <rect x="236" y="176" width="6" height="34" rx="3" fill="#F8FAFC"/>
+    <circle cx="239" cy="174" r="4" fill="#F8FAFC"/>
+    <circle cx="210" cy="220" r="4" fill="#F97316"/>
+    <circle cx="224" cy="220" r="4" fill="#16A34A"/>
+    <rect x="248" y="216" width="26" height="7" rx="3.5" fill="#CBD5E1"/>
+  </g>
+  <!-- glowing wifi arcs above router -->
+  <g fill="none" stroke="#F97316" stroke-linecap="round">
+    <circle cx="239" cy="150" r="4" fill="#F97316" stroke="none"/>
+    <path d="M 239 132 A 18 18 0 0 1 257 150" stroke-width="4" opacity="0.9"/>
+    <path d="M 239 112 A 38 38 0 0 1 277 150" stroke-width="4" opacity="0.65"/>
+    <path d="M 239 92 A 58 58 0 0 1 297 150" stroke-width="4" opacity="0.4"/>
+    <circle cx="239" cy="150" r="4" fill="#F97316" stroke="none"/>
+    <path d="M 239 132 A 18 18 0 0 0 221 150" stroke-width="4" opacity="0.9"/>
+    <path d="M 239 112 A 38 38 0 0 0 201 150" stroke-width="4" opacity="0.65"/>
+    <path d="M 239 92 A 58 58 0 0 0 181 150" stroke-width="4" opacity="0.4"/>
+  </g>
+  <!-- plant -->
+  <g>
+    <rect x="360" y="236" width="34" height="36" rx="6" fill="#F97316"/>
+    <path d="M 377 236 C 360 210 350 200 356 182 C 372 190 378 210 377 236" fill="#16A34A"/>
+    <path d="M 377 236 C 392 212 402 204 398 186 C 384 194 377 212 377 236" fill="#22C55E"/>
+  </g>
+  <g fill="#FDBA74">
+    <circle cx="120" cy="230" r="4"/>
+    <circle cx="150" cy="210" r="3"/>
+  </g>
+  <g fill="#93C5FD" opacity="0.8">
+    <circle cx="330" cy="120" r="4"/>
+    <circle cx="420" cy="180" r="3"/>
+  </g>
+</svg>
